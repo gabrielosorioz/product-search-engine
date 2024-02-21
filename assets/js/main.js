@@ -37,8 +37,8 @@ const addDataToHtml = () => {
           <span class="card__subtitle">${product.category}</span>
 
           <div class="card__prices">
-            <span class="card__price">$${product.price}</span>
-            <span class="card__discount">$${discountedPrice}</span>
+            <span class="card__price">$${discountedPrice}</span>
+            <span class="card__discount">$${product.price}</span>
           </div>
 
         <a href="#" class="cart__button">

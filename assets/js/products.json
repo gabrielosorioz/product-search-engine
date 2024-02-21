@@ -1,89 +1,87 @@
-{
-    "products": [
-      {
-        "id": 1,
-        "name": "T-shirts red",
-        "category": "T-Shirts",
-        "price": "$19.99",
-        "image": "./image/product-1.png"
-      },
-      {
-        "id": 2,
-        "name": "T-shirts green",
-        "category": "T-Shirts",
-        "price": "$24.99",
-        "image": "./image/product-2.png"
-      },
-      {
-        "id": 3,
-        "name": "Watch pingles",
-        "category": "Watches",
-        "price": "$49.99",
-        "image": "./image/product-3.png"
-      },
-      {
-        "id": 4,
-        "name": "Watch briks",
-        "category": "Watches",
-        "price": "$59.99",
-        "image": "./image/product-4.png"
-      },
-      {
-        "id": 5,
-        "name": "Shoes beutify",
-        "category": "Shoes",
-        "price": "$79.99",
-        "image": "./image/product-5.png"
-      },
-      {
-        "id": 6,
-        "name": "Shoes black",
-        "category": "Shoes",
-        "price": "$99.99",
-        "image": "./image/product-6.png"
-      },
-      {
-        "id": 7,
-        "name": "Cap Noodles",
-        "category": "Caps",
-        "price": "$29.99",
-        "image": "./image/product-7.png"
-      },
-      {
-        "id": 8,
-        "name": "Cap flower",
-        "category": "Caps",
-        "price": "$34.99",
-        "image": "./image/product-8.png"
-      },
-      {
-        "id": 9,
-        "name": "Pants jeans men",
-        "category": "Pants",
-        "price": "$39.99",
-        "image": "./image/product-9.png"
-      },
-      {
-        "id": 10,
-        "name": "Pants Jean Women",
-        "category": "Pants",
-        "price": "$44.99",
-        "image": "./image/product-10.png"
-      },
-      {
-        "id": 11,
-        "name": "Jacket Winner Women",
-        "category": "Jackets",
-        "price": "$89.99",
-        "image": "./image/product-11.png"
-      },
-      {
-        "id": 12,
-        "name": "Jacket Sr",
-        "category": "Jackets",
-        "price": "$79.99",
-        "image": "./image/product-12.png"
-      }
-    ]
+[
+  {
+    "id": 1,
+    "name": "T-shirts red",
+    "category": "T-Shirts",
+    "price": "19.99",
+    "image": "./assets/image/product-1.png"
+  },
+  {
+    "id": 2,
+    "name": "T-shirts green",
+    "category": "T-Shirts",
+    "price": "24.99",
+    "image": "./assets/image/product-2.png"
+  },
+  {
+    "id": 3,
+    "name": "Watch pingles",
+    "category": "Watches",
+    "price": "49.99",
+    "image": "./assets/image/product-3.png"
+  },
+  {
+    "id": 4,
+    "name": "Watch briks",
+    "category": "Watches",
+    "price": "59.99",
+    "image": "./assets/image/product-4.png"
+  },
+  {
+    "id": 5,
+    "name": "Shoes beutify",
+    "category": "Shoes",
+    "price": "79.99",
+    "image": "./assets/image/product-5.png"
+  },
+  {
+    "id": 6,
+    "name": "Shoes black",
+    "category": "Shoes",
+    "price": "99.99",
+    "image": "./assets/image/product-6.png"
+  },
+  {
+    "id": 7,
+    "name": "Cap Noodles",
+    "category": "Caps",
+    "price": "29.99",
+    "image": "./assets/image/product-7.png"
+  },
+  {
+    "id": 8,
+    "name": "Cap flower",
+    "category": "Caps",
+    "price": "34.99",
+    "image": "./assets/image/product-8.png"
+  },
+  {
+    "id": 9,
+    "name": "Pants jeans men",
+    "category": "Pants",
+    "price": "39.99",
+    "image": "./assets/image/product-9.png"
+  },
+  {
+    "id": 10,
+    "name": "Pants Jean Women",
+    "category": "Pants",
+    "price": "44.99",
+    "image": "./assets/image/product-10.png"
+  },
+  {
+    "id": 11,
+    "name": "Jacket Winner Women",
+    "category": "Jackets",
+    "price": "89.99",
+    "image": "./assets/image/product-11.png"
+  },
+  {
+    "id": 12,
+    "name": "Jacket Sr",
+    "category": "Jackets",
+    "price": "79.99",
+    "image": "./assets/image/product-12.png"
   }
+]
   

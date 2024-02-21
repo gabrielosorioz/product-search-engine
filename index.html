@@ -15,15 +15,15 @@
             <div class="nav__btns">
                 <div class="nav__shop">
                     <span class="cart__number">0</span>
-                    <i class="bx bx-shopping-bag cart__icon-shop"></i>
+                    <i id="cart__button" class="bx bx-shopping-bag cart__icon-shop"></i>
                 </div>
             </div>
         </nav>
 
     </header>
 
-    <div class="cart hide" id="cart">
-        <i class="bx bx-x cart__close"></i>
+    <div class="cart" id="cart">
+        <i class="bx bx-x cart__close" id="cart__close"></i>
 
         <h2 class="cart__title">My Cart</h2>
 
@@ -309,7 +309,7 @@
             </div>
            
             <a href="#" class="checkout__button">Buy Now 
-                <i class='bx bx-wallet' ></i>
+                <i class='bx bx-wallet'></i>
             </a>
             
         </div>
@@ -322,7 +322,7 @@
        <section class="shop section container">
         
         <div class="shop__items">
-            <div class="card__product">
+            <article class="card__product">
                 <div class="card__tag">New</div>
                 <img src="./assets/image/product-1.png" alt="" class="card__img">
                 <h3 class="card__title">T-shirt Red</h3>
@@ -334,10 +334,10 @@
                     <span class="card__discount">$14.99</span>
                 </div>
 
-                <a href="#" class="cart__button">
+                <a id="cart__button-shop" href="#" class="cart__button">
                     <i class="class bx bx-cart-alt cart__icon"></i>
                 </a>
-            </div>
+            </article>
 
             <div class="card__product">
                 <div class="card__tag">New</div>
@@ -360,6 +360,6 @@
        </section> 
     </main>
     
-    <script src="./assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

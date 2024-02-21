@@ -222,7 +222,7 @@ img {
    bottom: 0;
    background-color: var(--color-primary);
    padding: .75rem;
-   transition: .2s ease-in-out all;
+   transition: .5s ease-in-out all;
    border-radius: .25rem 0 .75rem .25rem; 
 }
 
@@ -418,6 +418,9 @@ img {
 
 @media screen and (max-width: 576px) {
 
+    .cart__container {
+        height: 65vh;
+    }
    .card__img {
         height: 150px;
    }

@@ -418,7 +418,9 @@ img {
 
 @media screen and (max-width: 576px) {
 
-   
+   .card__img {
+        height: 150px;
+   }
     .shop__container {
         grid-template-columns: 1fr;
     }

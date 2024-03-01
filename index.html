@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./assets/js/theme.js" defer></script>
     <title>Products list</title>
 </head>
 <body>
@@ -13,13 +15,20 @@
     <header class="header">
         <nav class="nav container">
             <div class="nav__btns">
+                <div class="btn__theme" aria-pressed="false" aria-label="Toggle light and dark theme"
+                data-theme-btn aria-pressed="false">
+                    <div class="btn__theme-indicator">
+                        <div class="btn__theme-icon-container">
+                            <i class="btn__theme-icon fa-solid fa-sun"></i>
+                        </div>
+                    </div>
+                </div>
                 <div class="nav__shop">
                     <span class="cart__number">0</span>
                     <i id="cart__button" class="bx bx-shopping-bag cart__icon-shop"></i>
                 </div>
             </div>
         </nav>
-
     </header>
 
     <div class="cart" id="cart">
@@ -322,39 +331,7 @@
        <section class="shop section container">
         
         <div class="shop__items">
-            <article class="card__product">
-                <div class="card__tag">New</div>
-                <img src="./assets/image/product-1.png" alt="" class="card__img">
-                <h3 class="card__title">T-shirt Red</h3>
-                <span class="card__subtitle">T-shirts</span>
-
-
-                <div class="card__prices">
-                    <span class="card__price">$9.99</span>
-                    <span class="card__discount">$14.99</span>
-                </div>
-
-                <a id="cart__button-shop" href="#" class="cart__button">
-                    <i class="class bx bx-cart-alt cart__icon"></i>
-                </a>
-            </article>
-
-            <div class="card__product">
-                <div class="card__tag">New</div>
-                <img src="./assets/image/product-2.png" class="card__img" alt="">
-                <h3 class="card__title">T-shirt Green</h3>
-                <span class="card__subtitle">T-shirts</span>
-
-                <div class="card__prices">
-                    <span class="card__price">$9.99</span>
-                    <span class="card__discount">$14.99</span>
-                </div>
-
-                <a href="#" class="cart__button">
-                    <i class="bx bx-cart-alt cart__icon"></i>
-                </a>
-
-            </div>
+            
         </div>
 
        </section> 

@@ -7,7 +7,8 @@
     /*
     * colors
     */
-    --color-primary: hsl(284, 88%, 61%);
+    --color-primary:hsla(8, 83%, 58%, 0.777);
+    --first-color-alt: hsla(8, 85%, 48%, 0.951);
     --title-color: hsl(250, 8%, 15%);
     --text-color: hsl(250, 8%, 35%);
     --body-color: hsl(250, 60%, 98%);
@@ -15,7 +16,27 @@
     --shadow: hsla(0, 0%, 15%, .1);
     --scroll-bar-color: hsl(250, 12%, 90%);
     --scroll-thumb-color: hsl(250, 12%, 80%);
-    
+    --icon-color:  #FFDE59;
+
+    /*========== Light theme ==========*/
+    --light-title-color: hsl(250, 8%, 15%);
+    --light-text-color: hsl(250, 8%, 35%);
+    --light-body-color: hsl(250, 60%, 98%);
+    --light-container-color: #fff;
+    --light-shadow: hsla(0, 0%, 15%, .1);
+    --light-scroll-bar-color: hsl(250, 12%, 90%);
+    --light-scroll-thumb-color: hsl(250, 12%, 80%);
+
+    /*========== Dark theme ==========*/
+    --color-alt-dark: #810CA8;
+    --dark-title-color: hsl(251, 8%, 85%);
+    --dark-text-color: hsl(250, 8%, 70%);
+        --dark-body-color:  hsl(180, 5%, 22%);
+    --dark-container-color: hsla(190, 5%, 26%, 0.512);
+    --dark-shadow: hsla(0, 2%, 9%, 0.334);
+    --dark-scroll-bar-color: hsl(246.429, 100%, 6%);
+    --dark-scroll-thumb-color: hsl(280, 2%, 25%);
+
     /*
     * Typography
     */
@@ -32,6 +53,30 @@
      /*========== Font weight ==========*/
      --font-medium: 500;
      --font-bold: 600;
+}
+
+[data-theme="light"] {
+    color-scheme: "light";
+
+    --title-color: var(--light-title-color);
+    --text-color: var(--light-text-color);
+    --body-color: var(--light-body-color);
+    --container-color: var(--light-container-color);
+    --shadow: var(--light-shadow);
+    --scroll-bar-color: var(--light-scroll-bar-color);
+    --scroll-thumb-color: var(--light-scroll-thumb-color);
+}
+
+[data-theme="dark"] {
+    color-scheme: "dark";
+
+    --title-color: var(--dark-title-color);
+    --text-color: var(--dark-text-color);
+    --body-color: var(--dark-body-color);
+    --container-color: var(--dark-container-color);
+    --shadow: var(--dark-shadow);
+    --scroll-bar-color: var(--dark-scroll-bar-color);
+    --scroll-thumb-color: var(--dark-scroll-thumb-color);
 }
 
 @media screen and (max-width: 992px) {
@@ -105,7 +150,7 @@ img {
 .hide {
     display: none;
 }
-
+/*===========HEADER==============*/
 .header {
     background-color: var(--body-color);
     position: fixed;
@@ -115,26 +160,82 @@ img {
     left: 0;
     z-index: 100;
     transition: .4s ease-in-out all;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 15px -2px;
+    box-shadow: rgba(26, 26, 27, 0.2) 0px 7px 8px -4px;
 }
 
-.nav {
+.nav {  
     height: calc(var(--header-height) + 1.5rem);
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    column-gap: 3rem;
 
 }
 
 .nav__btns {
+    align-items: center;
+    display: flex;
+    gap: .5rem;
     position: relative;
     margin-right: 1rem;
-    font-size: 1.75rem;
     color: var(--title-color);
     cursor: pointer;
 }
 
+.nav__shop {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* -------------- ANIMATION ------------ */
+.btn__theme-icon.animated {
+    animation: spin 0.5s;
+}
+
+@keyframes spin{
+    to {
+        transform: rotate(360deg);
+    }
+}
+[data-theme="dark"] .btn__theme {
+    box-shadow: inset 0 8px 60px rgba(0,0,0, .3),
+    inset 8px 0 8px rgba(0,0,0, .3),
+    inset 0 -4px 4px rgba(0,0,0, .3);
+}
+
+[data-theme="dark"] .btn__theme-indicator {
+   
+    transform: translateX(35px);
+    background-color: #2b2b2b;
+    box-shadow: 0 8px 40px rgba(0,0,0, .3);
+}
+
+[data-theme="dark"] .btn__theme-icon {
+    color: #fff;
+}
+
+.darkmode .btn__theme {
+    box-shadow: inset 0 8px 60px rgba(0,0,0, .3),
+    inset 8px 0 8px rgba(0,0,0, .3),
+    inset 0 -4px 4px rgba(0,0,0, .3);
+}
+    
+
+.darkmode .btn__theme-indicator{
+ 
+    transform: translateX(35px);
+    background-color: #2b2b2b;
+    box-shadow: 0 8px 40px rgba(0,0,0, .3);
+}
+
+.darkmode .btn__theme-icon{
+    color: #fff;
+}
+
+/*===========HEADER==============*/
+.cart__icon-shop {
+    font-size: 2rem;
+}
 .cart__number {
     background-color: var(--color-primary);
     padding: .20rem .45rem;
@@ -143,12 +244,50 @@ img {
     font-weight: var(--font-bold);
     font-size: .70rem;
     position: absolute;
-    right: -30%;
-    top: -30%;
+    right: -25%;
+    top: -25%;
+}
+.btn__theme {
+    background-color: #fff;
+    width: 70px;
+    height: 100%;
+    padding: 2px;
+    border-radius: 1.2rem;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,.1),
+                inset 0 8px 8px rgba(0,0,0,.1),
+                inset 0 -4px 4px rgba(0,0,0,.1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn__theme-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform .3s ease;
+    box-shadow: 0 8px 40px rgba(0,0,0,.2);
+
 }
 
 
+.btn__theme-container {
+    width: 100%;
+    height: 100%;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn__theme-icon {
+    color: var(--icon-color);
+}
 
 .shop__items {
     display:grid;
@@ -164,7 +303,7 @@ img {
     padding: 2rem 0 1.5rem 0;
     text-align: center;
     overflow: hidden;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 15px -2px;
+    box-shadow: rgba(1, 1, 1, 0.2) 4px 7px 10px -8px;
 }
 
 .card__tag {
@@ -234,7 +373,7 @@ img {
 .card__product:hover .card__img {
     transform: translateY(-.5rem);
     transition: all .4s ease-in-out;
-    filter: drop-shadow(10px 10px 10px rgba(100, 100, 111, 0.2));
+    filter: drop-shadow(10px 10px 10px rgba(100, 100, 111, 0.242));
     
 }
 
@@ -301,14 +440,14 @@ img {
     background-color: var(--container-color);
     padding: .5rem;
     border-radius: .5rem;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 15px -2px;
+    box-shadow: rgba(0, 0, 0, 0.239) 0px 7px 8px -4px;
 }
 
 .cart__img {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #e0e0ef;
+    border: 2px solid #e0e0ef67;
     border-radius: .5rem;
 }
 
@@ -384,7 +523,7 @@ img {
     border: 0 none;
     margin-right: auto;
     margin-left: auto;
-    background-color: #e0e0ef;
+    background-color: #e0e0ef2c;
 }
 
 .cart__total {
@@ -419,7 +558,7 @@ img {
 @media screen and (max-width: 576px) {
 
     .cart__container {
-        height: 65vh;
+        height: 60vh;
     }
    .card__img {
         height: 150px;
